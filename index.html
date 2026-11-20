@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0878d1">
+  <meta name="description" content="Maju Jaya Trans melayani perjalanan nyaman dari berbagai kota di Pulau Jawa menuju Bali. Pesan perjalanan Anda dengan mudah.">
+  <title>Maju Jaya Trans — Teman Perjalananmu ke Bali</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#beranda" aria-label="Maju Jaya Trans, beranda">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M5 22 43 4 28 43l-7-15-16-6Z" fill="currentColor"/><path d="m21 28 22-24" stroke="#0878D1" stroke-width="2"/><path d="m21 28 7 15 3-24" fill="#CDEBFF"/></svg>
+        </span>
+        <span class="brand-copy"><strong>maju jaya trans</strong><small>TRAVEL & TOUR</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a class="active" href="#beranda">Beranda</a>
+        <a href="#rute">Rute Travel</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#cara-pesan">Cara Pesan</a>
+        <a href="#tentang">Tentang Kami</a>
+      </nav>
+      <a class="nav-cta" href="#pesan">Pesan Sekarang <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> PERJALANAN ANTARKOTA, LEBIH NYAMAN</span>
+          <h1>Perjalanan seru<br>dimulai <em>di sini.</em></h1>
+          <p>Teman perjalanan terpercaya dari kota-kota di Pulau Jawa menuju Bali. Duduk nyaman, biar kami yang urus perjalananmu.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#pesan">Rencanakan perjalanan <span aria-hidden="true">→</span></a>
+            <a class="play-link" href="#rute"><span class="play-icon" aria-hidden="true">▶</span> Jelajahi rute</a>
+          </div>
+        </div>
+        <div class="hero-sticker" aria-hidden="true">
+          <span class="sticker-icon">✦</span>
+          <span>LET'S GO<br><b>EXPLORE</b></span>
+          <svg viewBox="0 0 170 40" fill="none"><path d="M2 28c40-35 87 30 157-12" stroke="white" stroke-width="2" stroke-dasharray="5 6"/><path d="m151 11 11 4-8 9" stroke="white" stroke-width="2"/></svg>
+        </div>
+        <div class="hero-note"><span class="note-line"></span><span>Jawa ke Bali<br><strong>sepenuh hati.</strong></span></div>
+      </div>
+
+      <div class="container booking-container" id="pesan">
+        <form class="booking-card" id="booking-form">
+          <div class="booking-heading">
+            <span class="booking-icon" aria-hidden="true">✈</span>
+            <div><h2>Mulai perjalananmu</h2><p>Isi detail perjalanan, kami bantu dari sini.</p></div>
+            <span class="secure-note"><span aria-hidden="true">✓</span> Mudah & aman</span>
+          </div>
+          <div class="booking-fields">
+            <label class="field">
+              <span>Nama lengkap</span>
+              <input type="text" name="name" placeholder="Nama kamu" autocomplete="name" required>
+            </label>
+            <label class="field">
+              <span>Kota asal</span>
+              <select name="origin" id="origin" required>
+                <option value="" selected disabled>Pilih kota asal</option>
+                <option>Kebumen</option><option>Jogja</option><option>Solo</option><option>Boyolali</option><option>Semarang</option><option>Jepara</option><option>Kudus</option><option>Pati</option><option>Semarang</option><option>Jepara</option><option>Demak</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Kota tujuan</span>
+              <select name="destination" required>
+                <option value="Semarang" selected>Semarang</option>
+                <option>Kebumen</option><option>Jogja</option><option>Solo</option><option>Boyolali</option><option>Semarang</option><option>Jepara</option><option>Kudus</option><option>Pati</option><option>Semarang</option><option>Jepara</option><option>Demak</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Tanggal berangkat</span>
+              <input type="date" name="date" required>
+            </label>
+            <label class="field passengers-field">
+              <span>Penumpang</span>
+              <select name="passengers">
+                <option>1 orang</option><option selected>2 orang</option><option>3 orang</option><option>4 orang</option><option>5+ orang</option>
+              </select>
+            </label>
+            <button class="button button-primary search-button" type="submit">Cek ketersediaan <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Keunggulan Bandhawa Travel">
+      <div class="container trust-grid">
+        <article class="trust-item"><span class="trust-icon">✦</span><div><h3>Nyaman di perjalanan</h3><p>Perjalanan lebih santai dan menyenangkan.</p></div></article>
+        <article class="trust-item"><span class="trust-icon">♧</span><div><h3>Siap membantu</h3><p>Tim kami siap menjawab kebutuhanmu.</p></div></article>
+        <article class="trust-item"><span class="trust-icon">⌖</span><div><h3>Banyak pilihan rute</h3></div></article>
+        <article class="trust-item"><span class="trust-icon">♡</span><div><h3>Pesan dengan mudah</h3><p>Hubungi kami langsung lewat WhatsApp.</p></div></article>
+      </div>
+    </section>
+
+    <section class="routes-section section-pad" id="rute">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow eyebrow-blue">PILIH PERJALANANMU</span><h2>Rute populer <span>kami</span></h2><p>Jelajahi berbagai rute menuju Bali dengan nyaman bersama Bandhawa.</p></div>
+          <a class="text-link" href="#pesan">Lihat semua rute <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="route-grid" id="route-grid"></div>
+      </div>
+    </section>
+
+    <section class="comfort-section section-pad" id="layanan">
+      <div class="container comfort-layout">
+        <div class="comfort-photo">
+          <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1000&q=85" alt="Pemandangan perjalanan melintasi pegunungan">
+          <div class="photo-badge"><span>✦</span><strong>Perjalanan nyaman<br>sepenuh hati</strong></div>
+          <div class="photo-caption"><span class="caption-dot"></span> JALAN-JALAN TANPA RIBET</div>
+        </div>
+        <div class="comfort-copy">
+          <span class="eyebrow eyebrow-blue">PERJALANAN TANPA RIBET</span>
+          <h2>Lebih dari sekadar<br>pergi ke <em>tujuan.</em></h2>
+          <p>Kami percaya perjalanan yang baik dimulai dari rasa nyaman. Bandhawa Travel siap menemani perjalananmu dari Jawa menuju Bali dengan pelayanan ramah dan proses pemesanan yang praktis.</p>
+          <ul class="benefit-list">
+            <li><span>✓</span><div><strong>Rute fleksibel</strong><small>Pilihan kota keberangkatan yang beragam.</small></div></li>
+            <li><span>✓</span><div><strong>Komunikasi langsung</strong><small>Tanyakan jadwal dan detail perjalanan kepada tim kami.</small></div></li>
+            <li><span>✓</span><div><strong>Pesan tanpa repot</strong><small>Konfirmasi perjalanan cukup melalui WhatsApp.</small></div></li>
+          </ul>
+          <a class="button button-primary" href="#pesan">Tanya perjalananmu <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section section-pad" id="cara-pesan">
+      <div class="container">
+        <div class="center-heading"><span class="eyebrow eyebrow-blue">PRAKTIS DAN MUDAH</span><h2>Cara pesan dalam <span>3 langkah</span></h2><p>Perjalananmu ke Bali tinggal beberapa langkah lagi.</p></div>
+        <div class="steps-grid">
+          <article class="step-card"><div class="step-art art-pin"><span>⌖</span></div><span class="step-number">01</span><h3>Pilih rute</h3><p>Tentukan kota asal, tujuan, dan tanggal keberangkatanmu.</p><span class="step-arrow" aria-hidden="true">→</span></article>
+          <article class="step-card"><div class="step-art art-chat"><span>☏</span></div><span class="step-number">02</span><h3>Hubungi kami</h3><p>Kirim detail perjalanan, tim kami akan membantu konfirmasi.</p><span class="step-arrow" aria-hidden="true">→</span></article>
+          <article class="step-card"><div class="step-art art-go"><span>➤</span></div><span class="step-number">03</span><h3>Siap berangkat</h3><p>Setelah detail disepakati, waktunya menikmati perjalanan.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section" id="tentang">
+      <div class="container closing-wrap">
+        <div class="closing-copy"><span class="eyebrow">WAKTUNYA JALAN-JALAN</span><h2>Bali memanggil.<br>Kami siap menemani.</h2><p>Rencanakan perjalananmu hari ini bersama Bandhawa Travel.</p><a class="button button-light" href="#pesan">Pesan perjalanan <span aria-hidden="true">→</span></a></div>
+        <div class="closing-stats"><div><strong>12+</strong><span>Kota keberangkatan</span></div><div><strong>Jawa</strong><span>Menuju Bali</span></div><div><strong>24/7</strong><span>Siap dihubungi</span></div></div>
+        <div class="closing-plane" aria-hidden="true">✈</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#beranda">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M5 22 43 4 28 43l-7-15-16-6Z" fill="currentColor"/><path d="m21 28 22-24" stroke="#0878D1" stroke-width="2"/><path d="m21 28 7 15 3-24" fill="#CDEBFF"/></svg></span>
+        <span class="brand-copy"><strong>bandhawa</strong><small>TRAVEL & TOUR</small></span>
+      </a>
+      <p>Teman perjalananmu dari Jawa menuju Bali.<br>Nyaman di perjalanan, hangat dalam pelayanan.</p>
+      <a class="footer-contact" href="https://wa.me/6283141268453" target="_blank" rel="noopener noreferrer">Hubungi kami <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year"></span> Bandhawa Travel. Semua hak dilindungi.</span><a href="#beranda">Kembali ke atas ↑</a></div>
+  </footer>
+</body>
+</html>
