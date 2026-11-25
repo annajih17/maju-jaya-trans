@@ -1,43 +1,253 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0878d1">
-<meta name="description" content="Maju Jaya Trans melayani travel reguler, charter, dan pengiriman barang dengan layanan door-to-door.">
-<title>Maju Jaya Trans — Travel & Pengiriman</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
-</head><body>
-<header class="site-header"><div class="container nav-wrap">
-<a class="brand" href="#beranda" aria-label="Maju Jaya Trans"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M5 22 43 4 28 43l-7-15-16-6Z" fill="currentColor"/><path d="m21 28 22-24" stroke="#0878D1" stroke-width="2"/><path d="m21 28 7 15 3-24" fill="#CDEBFF"/></svg></span><span class="brand-copy"><strong>maju jaya trans</strong><small>TRAVEL & PENGIRIMAN</small></span></a>
-<button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
-<nav class="main-nav" aria-label="Navigasi utama"><a class="active" href="#beranda">Beranda</a><a href="#rute">Rute</a><a href="#layanan">Layanan</a><a href="#cara-pesan">Cara Pesan</a><a href="#tentang">Tentang Kami</a></nav><a class="nav-cta" href="#pesan">Pesan Sekarang <span>↗</span></a>
-</div></header>
-<main>
-<section class="hero" id="beranda"><div class="hero-image" aria-hidden="true"></div><div class="hero-shade" aria-hidden="true"></div><div class="container hero-content">
-<div class="hero-copy"><span class="eyebrow"><span class="eyebrow-dot"></span> TRAVEL ANTARKOTA & LAYANAN DOOR-TO-DOOR</span><h1>Perjalanan nyaman,<br><em>lebih mudah.</em></h1><p>Melayani perjalanan dan pengiriman dengan amanah, nyaman, serta komunikasi langsung untuk memastikan kebutuhan perjalananmu.</p><div class="hero-actions"><a class="button button-light" href="#pesan">Pesan perjalanan <span>→</span></a><a class="play-link" href="#rute"><span class="play-icon">▶</span> Lihat layanan</a></div></div>
-<div class="hero-sticker" aria-hidden="true"><span class="sticker-icon">✦</span><span>AMAN & NYAMAN<br><b>DOOR-TO-DOOR</b></span></div><div class="hero-note"><span class="note-line"></span><span>Melayani dengan amanah<br><strong>mengutamakan kenyamanan.</strong></span></div></div>
-<div class="container booking-container" id="pesan"><div class="booking-card" id="booking-card">
-<div class="booking-heading"><span class="booking-icon" aria-hidden="true">✈</span><div><h2>Mulai perjalananmu</h2><p>Pilih layanan sebelum mengisi formulir.</p></div><span class="secure-note"><span aria-hidden="true">✓</span> Mudah & aman</span></div>
-<div class="service-tabs" role="tablist" aria-label="Pilih layanan"><button type="button" class="service-tab active" data-service="regular">Travel Reguler</button><button type="button" class="service-tab" data-service="charter">Charter</button></div>
-<form id="booking-form" class="service-form"><div class="booking-fields">
-<label class="field"><span>Nama lengkap</span><input type="text" name="name" placeholder="Nama kamu" autocomplete="name" required></label>
-<label class="field"><span>Kota asal</span><select name="origin" id="origin" required><option value="" selected disabled>Pilih kota asal</option></select></label>
-<label class="field"><span>Kota tujuan</span><select name="destination" id="destination" required><option value="" selected disabled>Pilih kota tujuan</option></select></label>
-<label class="field"><span>Tanggal berangkat</span><input type="date" name="date" required></label>
-<label class="field passengers-field"><span>Penumpang</span><select name="passengers"><option>1 orang</option><option selected>2 orang</option><option>3 orang</option><option>4 orang</option><option>5+ orang</option></select></label>
-<button class="button button-primary search-button" type="submit">Cek ketersediaan <span aria-hidden="true">→</span></button></div></form>
-<form id="charter-form" class="service-form hidden"><div class="booking-fields charter-grid">
-<label class="field"><span>Nama pemesan *</span><input name="nama" type="text" placeholder="Nama lengkap" required></label><label class="field"><span>Nomor WhatsApp *</span><input name="telepon" type="tel" placeholder="08xxxxxxxxxx" required></label>
-<label class="field"><span>Jenis charter *</span><select name="jenis" required><option value="" disabled selected>Pilih jenis charter</option><option>Sekali jalan</option><option>Pulang pergi</option><option>Per jam</option><option>Per hari</option><option>Beberapa hari</option></select></label><label class="field"><span>Tanggal berangkat *</span><input name="tanggal" type="date" required></label>
-<label class="field"><span>Waktu berangkat yang diinginkan</span><input name="waktu" type="time"></label><label class="field"><span>Jumlah penumpang *</span><input name="penumpang" type="number" min="1" placeholder="Jumlah orang" required></label>
-<label class="field full"><span>Alamat / lokasi penjemputan *</span><textarea name="jemput" placeholder="Alamat lengkap atau tautan lokasi" required></textarea></label><label class="field full"><span>Alamat / lokasi tujuan *</span><textarea name="tujuan" placeholder="Alamat tujuan atau tautan lokasi" required></textarea></label>
-<label class="field full"><span>Rute tambahan / tempat singgah</span><textarea name="rute" placeholder="Jika ada beberapa tujuan atau tempat singgah"></textarea></label><label class="field full"><span>Durasi / tanggal kembali</span><input name="durasi" type="text" placeholder="Contoh: kembali tanggal 20 atau penggunaan 2 hari"></label><label class="field full"><span>Catatan kebutuhan perjalanan</span><textarea name="catatan" placeholder="Permintaan khusus, barang bawaan, dan lainnya"></textarea></label>
-<button class="button button-primary search-button full" type="submit">Ajukan Charter <span aria-hidden="true">→</span></button></div></form><p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p></div></div></section>
-<section class="trust-strip" aria-label="Keunggulan Maju Jaya Trans"><div class="container trust-grid"><article class="trust-item"><span class="trust-icon">✦</span><div><h3>Door-to-door</h3><p>Jemput dan antar sesuai kesepakatan serta cakupan layanan.</p></div></article><article class="trust-item"><span class="trust-icon">♧</span><div><h3>Aman & nyaman</h3><p>Mengutamakan kenyamanan dan keamanan perjalanan.</p></div></article><article class="trust-item"><span class="trust-icon">⌖</span><div><h3>Jadwal dikonfirmasi</h3><p>Detail waktu perjalanan dikomunikasikan dengan admin.</p></div></article><article class="trust-item"><span class="trust-icon">♡</span><div><h3>WhatsApp</h3><p>Komunikasi pemesanan langsung dan praktis.</p></div></article></div></section>
-<section class="routes-section section-pad" id="rute"><div class="container"><div class="section-heading"><div><span class="eyebrow eyebrow-blue">AREA LAYANAN</span><h2>Area perjalanan <span>kami</span></h2><p>Rute reguler utama dan kota yang tercantum dalam area layanan. Rute serta titik jemput/antar perlu dikonfirmasi.</p></div><a class="text-link" href="#pesan">Ajukan perjalanan <span>↗</span></a></div><div class="route-grid" id="route-grid"></div><p class="form-hint">Rute reguler utama yang disebutkan dalam kuisioner: Kebumen – Semarang – Jepara. Area kota lainnya dapat ditanyakan kepada admin.</p></div></section>
-<section class="comfort-section section-pad" id="layanan"><div class="container comfort-layout"><div class="comfort-photo"><img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=85" alt="Kendaraan untuk perjalanan antarkota"><div class="photo-badge"><span>✦</span><strong>Melayani dengan amanah<br>dan mengutamakan kenyamanan</strong></div><div class="photo-caption"><span class="caption-dot"></span> LAYANAN PERJALANAN</div></div><div class="comfort-copy"><span class="eyebrow eyebrow-blue">LAYANAN MAJU JAYA TRANS</span><h2>Perjalanan sesuai<br>kebutuhan <em>mu.</em></h2><p>Maju Jaya Trans menyediakan layanan perjalanan reguler, charter, dan pengiriman. Detail perjalanan dan layanan dibicarakan dengan admin untuk memastikan kebutuhan dan cakupan layanan.</p><ul class="benefit-list"><li><span>✓</span><div><strong>Travel reguler</strong><small>Rute tetap, keberangkatan harian, dan jemput-antar berdasarkan kesepakatan.</small></div></li><li><span>✓</span><div><strong>Charter</strong><small>Perjalanan fleksibel, termasuk permintaan rute, waktu, dan beberapa titik.</small></div></li><li><span>✓</span><div><strong>Pengiriman</strong><small>Pengiriman paket, dokumen, dan sepeda motor—detailnya dikonfirmasi admin.</small></div></li></ul><a class="button button-primary" href="#pesan">Tanyakan layanan <span>→</span></a></div></div></section>
-<section class="steps-section section-pad" id="cara-pesan"><div class="container"><div class="center-heading"><span class="eyebrow eyebrow-blue">PRAKTIS DAN MUDAH</span><h2>Cara pemesanan <span>3 langkah</span></h2><p>Isi data, lanjutkan ke WhatsApp, lalu tunggu konfirmasi admin.</p></div><div class="steps-grid"><article class="step-card"><div class="step-art art-pin"><span>⌖</span></div><span class="step-number">01</span><h3>Isi formulir</h3><p>Lengkapi layanan, rute, tanggal, jumlah penumpang, dan alamat.</p><span class="step-arrow">→</span></article><article class="step-card"><div class="step-art art-chat"><span>☏</span></div><span class="step-number">02</span><h3>Hubungi admin</h3><p>Formulir akan dirangkum ke WhatsApp untuk pembicaraan dan konfirmasi.</p><span class="step-arrow">→</span></article><article class="step-card"><div class="step-art art-go"><span>➤</span></div><span class="step-number">03</span><h3>Tunggu konfirmasi</h3><p>Perjalanan dipastikan setelah admin menyepakati detail pemesanan.</p></article></div></div></section>
-<section class="closing-section" id="tentang"><div class="container closing-wrap"><div class="closing-copy"><span class="eyebrow">MAJU JAYA TRANS</span><h2>Melayani dengan amanah<br>dan mengutamakan kenyamanan.</h2><p>Hubungi kami untuk informasi rute, jadwal, harga, dan pemesanan.</p><a class="button button-light" href="#pesan">Ajukan pemesanan <span>→</span></a></div><div class="closing-stats"><div><strong>Reguler</strong><span>Rute tetap, harian</span></div><div><strong>Charter</strong><span>Perjalanan fleksibel</span></div><div><strong>Door-to-door</strong><span>Jemput & antar</span></div></div><div class="closing-plane" aria-hidden="true">➤</div></div></section>
-</main><footer class="site-footer"><div class="container footer-main"><a class="brand footer-brand" href="#beranda"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M5 22 43 4 28 43l-7-15-16-6Z" fill="currentColor"/><path d="m21 28 22-24" stroke="#0878D1" stroke-width="2"/><path d="m21 28 7 15 3-24" fill="#CDEBFF"/></svg></span><span class="brand-copy"><strong>maju jaya trans</strong><small>TRAVEL & PENGIRIMAN</small></span></a><p>Melayani dengan amanah dan mengutamakan kenyamanan.</p><a class="footer-contact" href="https://wa.me/6283141268453" target="_blank" rel="noopener noreferrer">Hubungi kami <span>↗</span></a></div><div class="container footer-bottom"><span>© <span id="current-year"></span> Maju Jaya Trans. Semua hak dilindungi.</span><a href="#beranda">Kembali ke atas ↑</a></div></footer>
-</body></html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0878d1">
+  <meta name="description"
+    content="Maju Jaya Trans melayani travel reguler, charter, dan pengiriman barang dengan layanan door-to-door.">
+  <title>Maju Jaya Trans — Travel & Pengiriman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#beranda" aria-label="Maju Jaya Trans"><span class="brand-mark" aria-hidden="true"><svg
+            viewBox="0 0 48 48" fill="none">
+            <path d="M5 22 43 4 28 43l-7-15-16-6Z" fill="currentColor" />
+            <path d="m21 28 22-24" stroke="#0878D1" stroke-width="2" />
+            <path d="m21 28 7 15 3-24" fill="#CDEBFF" />
+          </svg></span><span class="brand-copy"><strong>maju jaya trans</strong><small>TRAVEL &
+            PENGIRIMAN</small></span></a>
+      <button class="menu-toggle" type="button" aria-label="Buka menu"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Navigasi utama"><a class="active" href="#beranda">Beranda</a><a
+          href="#rute">Rute</a><a href="#layanan">Layanan</a><a href="#cara-pesan">Cara Pesan</a><a
+          href="#tentang">Tentang Kami</a></nav><a class="nav-cta" href="#pesan">Pesan Sekarang <span>↗</span></a>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-copy"><span class="eyebrow"><span class="eyebrow-dot"></span> TRAVEL ANTARKOTA & LAYANAN
+            DOOR-TO-DOOR</span>
+          <h1>Perjalanan nyaman,<br><em>lebih mudah.</em></h1>
+          <p>Melayani perjalanan dan pengiriman dengan amanah, nyaman, serta komunikasi langsung untuk memastikan
+            kebutuhan perjalananmu.</p>
+          <div class="hero-actions"><a class="button button-light" href="#pesan">Pesan perjalanan <span>→</span></a><a
+              class="play-link" href="#rute"><span class="play-icon">▶</span> Lihat layanan</a></div>
+        </div>
+        <div class="hero-sticker" aria-hidden="true"><span class="sticker-icon">✦</span><span>AMAN &
+            NYAMAN<br><b>DOOR-TO-DOOR</b></span></div>
+        <div class="hero-note"><span class="note-line"></span><span>Melayani dengan amanah<br><strong>mengutamakan
+              kenyamanan.</strong></span></div>
+      </div>
+      <div class="container booking-container" id="pesan">
+        <div class="booking-card" id="booking-card">
+          <div class="booking-heading"><span class="booking-icon" aria-hidden="true">✈</span>
+            <div>
+              <h2>Mulai perjalananmu</h2>
+              <p>Pilih layanan sebelum mengisi formulir.</p>
+            </div><span class="secure-note"><span aria-hidden="true">✓</span> Mudah & aman</span>
+          </div>
+          <div class="service-tabs" role="tablist" aria-label="Pilih layanan"><button type="button"
+              class="service-tab active" data-service="regular">Travel Reguler</button><button type="button"
+              class="service-tab" data-service="charter">Charter</button></div>
+          <form id="booking-form" class="service-form">
+            <div class="booking-fields">
+              <label class="field"><span>Nama lengkap</span><input type="text" name="name" placeholder="Nama kamu"
+                  autocomplete="name" required></label>
+              <label class="field"><span>Kota asal</span><select name="origin" id="origin" required>
+                  <option value="" selected disabled>Pilih kota asal</option>
+                </select></label>
+              <label class="field"><span>Kota tujuan</span><select name="destination" id="destination" required>
+                  <option value="" selected disabled>Pilih kota tujuan</option>
+                </select></label>
+              <label class="field"><span>Tanggal berangkat</span><input type="date" name="date" required></label>
+              <label class="field passengers-field"><span>Penumpang</span><select name="passengers">
+                  <option>1 orang</option>
+                  <option selected>2 orang</option>
+                  <option>3 orang</option>
+                  <option>4 orang</option>
+                  <option>5+ orang</option>
+                </select></label>
+              <button class="button button-primary search-button" type="submit">Cek ketersediaan <span
+                  aria-hidden="true">→</span></button>
+            </div>
+          </form>
+          <form id="charter-form" class="service-form hidden">
+            <div class="booking-fields charter-grid">
+              <label class="field"><span>Nama pemesan *</span><input name="nama" type="text" placeholder="Nama lengkap"
+                  required></label><label class="field"><span>Nomor WhatsApp *</span><input name="telepon" type="tel"
+                  placeholder="08xxxxxxxxxx" required></label>
+              <label class="field"><span>Jenis charter *</span><select name="jenis" required>
+                  <option value="" disabled selected>Pilih jenis charter</option>
+                  <option>Sekali jalan</option>
+                  <option>Pulang pergi</option>
+                  <option>Per jam</option>
+                  <option>Per hari</option>
+                  <option>Beberapa hari</option>
+                </select></label><label class="field"><span>Tanggal berangkat *</span><input name="tanggal" type="date"
+                  required></label>
+              <label class="field"><span>Waktu berangkat yang diinginkan</span><input name="waktu"
+                  type="time"></label><label class="field"><span>Jumlah penumpang *</span><input name="penumpang"
+                  type="number" min="1" placeholder="Jumlah orang" required></label>
+              <label class="field full"><span>Alamat / lokasi penjemputan *</span><textarea name="jemput"
+                  placeholder="Alamat lengkap atau tautan lokasi" required></textarea></label><label
+                class="field full"><span>Alamat / lokasi tujuan *</span><textarea name="tujuan"
+                  placeholder="Alamat tujuan atau tautan lokasi" required></textarea></label>
+              <label class="field full"><span>Rute tambahan / tempat singgah</span><textarea name="rute"
+                  placeholder="Jika ada beberapa tujuan atau tempat singgah"></textarea></label><label
+                class="field full"><span>Durasi / tanggal kembali</span><input name="durasi" type="text"
+                  placeholder="Contoh: kembali tanggal 20 atau penggunaan 2 hari"></label><label
+                class="field full"><span>Catatan kebutuhan perjalanan</span><textarea name="catatan"
+                  placeholder="Permintaan khusus, barang bawaan, dan lainnya"></textarea></label>
+              <button class="button button-primary search-button full" type="submit">Ajukan Charter <span
+                  aria-hidden="true">→</span></button>
+            </div>
+          </form>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+    <section class="trust-strip" aria-label="Keunggulan Maju Jaya Trans">
+      <div class="container trust-grid">
+        <article class="trust-item"><span class="trust-icon">✦</span>
+          <div>
+            <h3>Door-to-door</h3>
+            <p>Jemput dan antar sesuai kesepakatan serta cakupan layanan.</p>
+          </div>
+        </article>
+        <article class="trust-item"><span class="trust-icon">♧</span>
+          <div>
+            <h3>Aman & nyaman</h3>
+            <p>Mengutamakan kenyamanan dan keamanan perjalanan.</p>
+          </div>
+        </article>
+        <article class="trust-item"><span class="trust-icon">⌖</span>
+          <div>
+            <h3>Jadwal dikonfirmasi</h3>
+            <p>Detail waktu perjalanan dikomunikasikan dengan admin.</p>
+          </div>
+        </article>
+        <article class="trust-item"><span class="trust-icon">♡</span>
+          <div>
+            <h3>WhatsApp</h3>
+            <p>Komunikasi pemesanan langsung dan praktis.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="routes-section section-pad" id="rute">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow eyebrow-blue">AREA LAYANAN</span>
+            <h2>Area perjalanan <span>kami</span></h2>
+            <p>Rute reguler utama dan kota yang tercantum dalam area layanan. Rute serta titik jemput/antar perlu
+              dikonfirmasi.</p>
+          </div><a class="text-link" href="#pesan">Ajukan perjalanan <span>↗</span></a>
+        </div>
+        <div class="route-grid" id="route-grid"></div>
+        <p class="form-hint">Rute reguler utama : Kebumen - Jogja - Solo - Boyolali - Semarang - Jepara - Kudus - Pati - Demak - Salatiga. Area kota
+          lainnya dapat ditanyakan kepada admin.</p>
+      </div>
+    </section>
+    <section class="comfort-section section-pad" id="layanan">
+      <div class="container comfort-layout">
+        <div class="comfort-photo"><img
+            src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=85"
+            alt="Kendaraan untuk perjalanan antarkota">
+          <div class="photo-badge"><span>✦</span><strong>Melayani dengan amanah<br>dan mengutamakan kenyamanan</strong>
+          </div>
+          <div class="photo-caption"><span class="caption-dot"></span> LAYANAN PERJALANAN</div>
+        </div>
+        <div class="comfort-copy"><span class="eyebrow eyebrow-blue">LAYANAN MAJU JAYA TRANS</span>
+          <h2>Perjalanan sesuai<br>kebutuhan <em>mu.</em></h2>
+          <p>Maju Jaya Trans menyediakan layanan perjalanan reguler, charter, dan pengiriman. Detail perjalanan dan
+            layanan dibicarakan dengan admin untuk memastikan kebutuhan dan cakupan layanan.</p>
+          <ul class="benefit-list">
+            <li><span>✓</span>
+              <div><strong>Travel reguler</strong><small>Rute tetap, keberangkatan harian, dan jemput-antar berdasarkan
+                  kesepakatan.</small></div>
+            </li>
+            <li><span>✓</span>
+              <div><strong>Charter</strong><small>Perjalanan fleksibel, termasuk permintaan rute, waktu, dan beberapa
+                  titik.</small></div>
+            </li>
+            <li><span>✓</span>
+              <div><strong>Pengiriman</strong><small>Pengiriman paket, dokumen, dan sepeda motor—detailnya dikonfirmasi
+                  admin.</small></div>
+            </li>
+          </ul><a class="button button-primary" href="#pesan">Tanyakan layanan <span>→</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="steps-section section-pad" id="cara-pesan">
+      <div class="container">
+        <div class="center-heading"><span class="eyebrow eyebrow-blue">PRAKTIS DAN MUDAH</span>
+          <h2>Cara pemesanan <span>3 langkah</span></h2>
+          <p>Isi data, lanjutkan ke WhatsApp, lalu tunggu konfirmasi admin.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-art art-pin"><span>⌖</span></div><span class="step-number">01</span>
+            <h3>Isi formulir</h3>
+            <p>Lengkapi layanan, rute, tanggal, jumlah penumpang, dan alamat.</p><span class="step-arrow">→</span>
+          </article>
+          <article class="step-card">
+            <div class="step-art art-chat"><span>☏</span></div><span class="step-number">02</span>
+            <h3>Hubungi admin</h3>
+            <p>Formulir akan dirangkum ke WhatsApp untuk pembicaraan dan konfirmasi.</p><span
+              class="step-arrow">→</span>
+          </article>
+          <article class="step-card">
+            <div class="step-art art-go"><span>➤</span></div><span class="step-number">03</span>
+            <h3>Tunggu konfirmasi</h3>
+            <p>Perjalanan dipastikan setelah admin menyepakati detail pemesanan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="closing-section" id="tentang">
+      <div class="container closing-wrap">
+        <div class="closing-copy"><span class="eyebrow">MAJU JAYA TRANS</span>
+          <h2>Melayani dengan amanah<br>dan mengutamakan kenyamanan.</h2>
+          <p>Hubungi kami untuk informasi rute, jadwal, harga, dan pemesanan.</p><a class="button button-light"
+            href="#pesan">Ajukan pemesanan <span>→</span></a>
+        </div>
+        <div class="closing-stats">
+          <div><strong>Reguler</strong><span>Rute tetap, harian</span></div>
+          <div><strong>Charter</strong><span>Perjalanan fleksibel</span></div>
+          <div><strong>Door-to-door</strong><span>Jemput & antar</span></div>
+        </div>
+        <div class="closing-plane" aria-hidden="true">➤</div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-main"><a class="brand footer-brand" href="#beranda"><span class="brand-mark"
+          aria-hidden="true"><svg viewBox="0 0 48 48" fill="none">
+            <path d="M5 22 43 4 28 43l-7-15-16-6Z" fill="currentColor" />
+            <path d="m21 28 22-24" stroke="#0878D1" stroke-width="2" />
+            <path d="m21 28 7 15 3-24" fill="#CDEBFF" />
+          </svg></span><span class="brand-copy"><strong>maju jaya trans</strong><small>TRAVEL &
+            PENGIRIMAN</small></span></a>
+      <p>Melayani dengan amanah dan mengutamakan kenyamanan.</p><a class="footer-contact"
+        href="https://wa.me/6283141268453" target="_blank" rel="noopener noreferrer">Hubungi kami <span>↗</span></a>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year"></span> Maju Jaya Trans. Semua hak
+        dilindungi.</span><a href="#beranda">Kembali ke atas ↑</a></div>
+  </footer>
+</body>
+
+</html>
